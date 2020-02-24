@@ -1,6 +1,8 @@
 var link = document.querySelector(".form-remove-button");
 var form = document.querySelector(".form");
-var date = form.querySelector("[name=date-1]");
+
+var dateIn = form.querySelector("#dateIn");
+var dateOut = form.querySelector("#dateOut");
 
 var increase_ad = document.querySelector(".decrease-adult");
 var increase_ch = document.querySelector(".decrease-children");
@@ -10,16 +12,17 @@ var decrease_ch = document.querySelector(".increase-children");
 
 var submit = form.querySelector(".main-form_submit");
 
+var wow = document.querySelector(".book");
 
 // Показ и скрытие формы
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
-  form.classList.toggle("form-remove")
-  date.focus();
+  form.classList.toggle("form-remove");
+  dateIn.focus();
 
   if (form.classList.toggle(".form-remove")) {
-    date.blur();
+    dateIn.blur();
   };
 });
 
@@ -50,5 +53,28 @@ increase_ch.addEventListener("click", function (evt) {
 });
 
 form.addEventListener("submit", function (evt) {
+  if (!dateIn.value || !dateOut.value) {
+    evt.preventDefault();
+    form.classList.remove("submit-error");
+    form.offsetWidth = form.offsetWidth;
+    form.classList.add("submit-error");
+  } else {
+    if (dateIn.value && dateOut.value) {
+      evt.preventDefault();
+      form.classList.remove("submit-valid");
+      form.offsetWidth = form.offsetWidth;
+      form.classList.add("submit-valid");
+
+      setTimeout((evt) => {
+        form.submit();
+      }, 800);
+    }
+  }
+});
+
+// inner
+
+wow.addEventListener("click", function (eee) {
   evt.preventDefault();
+  wow.classList.toggle("filter-active");
 });
