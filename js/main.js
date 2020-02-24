@@ -12,8 +12,6 @@ var decrease_ch = document.querySelector(".increase-children");
 
 var submit = form.querySelector(".main-form_submit");
 
-var wow = document.querySelector(".book");
-
 // Показ и скрытие формы
 
 link.addEventListener("click", function (evt) {
@@ -73,8 +71,3 @@ form.addEventListener("submit", function (evt) {
 });
 
 // inner
-
-wow.addEventListener("click", function (eee) {
-  evt.preventDefault();
-  wow.classList.toggle("filter-active");
-});
