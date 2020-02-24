@@ -1,8 +1,8 @@
 var link = document.querySelector(".form-remove-button");
 var form = document.querySelector(".form");
 
-var dateIn = document.querySelector("#dateIn");
-var dateOut = document.querySelector("#dateOut");
+var dateIn = form.querySelector("#dateIn");
+var dateOut = form.querySelector("#dateOut");
 
 var increase_ad = document.querySelector(".decrease-adult");
 var increase_ch = document.querySelector(".decrease-children");
@@ -10,7 +10,7 @@ var increase_ch = document.querySelector(".decrease-children");
 var decrease_ad = document.querySelector(".increase-adult");
 var decrease_ch = document.querySelector(".increase-children");
 
-var submit = document.querySelector(".main-form_submit");
+var submit = form.querySelector(".main-form_submit");
 
 // Показ и скрытие формы
 
