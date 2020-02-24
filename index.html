@@ -139,16 +139,16 @@
         <p>Укажите предполагаемые даты поездки, <br>
           и мы покажем вам лучшие предложения гостиниц в седоне</p>
 
-        <button type="button" class="form-active button_brown">
+        <a href="#" class="form-remove-button button_brown">
           Поиск гостиницы в седоне
-        </button>
+        </a>
 
-        <form class="main-form" action="" method="post">
+        <form class="form" action="" method="post">
 
           <div class="date-field">
 
             <div class="date">
-              <label for="date-1">Дата&nbspзаезда:</label>
+              <label for="date-1">Дата&nbsp;заезда:</label>
               <label for="calendar-date-1" class="visuallyhidden">выбор даты заезда</label>
 
               <div>
@@ -168,7 +168,7 @@
             </div>
 
             <div class="date">
-              <label for="date-2">Дата&nbspвыезда:</label>
+              <label for="date-2">Дата&nbsp;выезда:</label>
               <label for="calendar-date-2" class="visuallyhidden">выбор даты выезда</label>
 
               <div>
@@ -194,12 +194,12 @@
               <label for="adult">Взрослые:</label>
 
               <div class="field-person_wrapper">
-                <button class="button_gray form_button number" type="button">-</button>
+                <button class="increase-adult button_gray form_button number" type="button">-</button>
 
-                <input class="form_bg-color" id="adult" type="text" name="adult" value="1" placeholder="2" placeholder="0"
+                <input class="form_bg-color" id="adult" type="text" name="adult" value="1" placeholder="2"
                   pattern="[0-9]{1,2}" required>
 
-                <button class="button_gray form_button" type="button">+</button>
+                <button class="decrease-adult button_gray form_button" type="button">+</button>
               </div>
 
             </div>
@@ -208,11 +208,12 @@
               <label for="children">Дети:</label>
 
               <div class="field-person_wrapper">
-                <button class="button_gray form_button number" type="button">-</button>
+                <button class="increase-children button_gray form_button number" type="button">-</button>
 
-                <input class="form_bg-color" id="children" type="text" name="children" value="0" placeholder="0" pattern="[0-9]{1,2}">
+                <input class="children form_bg-color" id="children" type="text" name="children" value="0" placeholder="0"
+                  pattern="[0-9]{1,2}">
 
-                <button class="button_gray form_button" type="button">+</button>
+                <button class="decrease-children button_gray form_button" type="button">+</button>
               </div>
 
             </div>
@@ -236,9 +237,13 @@
     <!-- Невидимый h2 тобы валидатор не ругался ) -->
     <h2 class="visuallyhidden">Карта Седоны. Седона, Аризона, США</h2>
 
+    <p>
+      <img src="img/map.jpg" width="100%" height="594" alt="">
+    </p>
+
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d487549.585809088!2d-111.67634675305928!3d34.8789796237371!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2snl!4v1582036983057!5m2!1sru!2snl"
-      frameborder="0" style="border:0;" allowfullscreen="">
+      allowfullscreen="">
     </iframe>
 
   </article>
@@ -279,6 +284,8 @@
     </div>
 
   </footer>
+
+  <script src="js/main.js"></script>
 
 </body>
 
