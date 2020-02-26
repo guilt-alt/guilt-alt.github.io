@@ -57,15 +57,15 @@
 
             <label class="check">
               <input class="box visuallyhidden" type="checkbox" name="hotel" id="hotel" checked>
-              <span class="check_box"></span>Гостиница
+              <span class="check_box check-hotel"></span>Гостиница
             </label>
             <label class="check">
               <input class="box visuallyhidden" type="checkbox" name="motel" id="motel" checked>
-              <span class="check_box"></span>Мотель
+              <span class="check_box check-motel"></span>Мотель
             </label>
             <label class="check">
               <input class="box visuallyhidden" type="checkbox" name="apartments" id="apartments" checked>
-              <span class="check_box"></span>Апартаменты
+              <span class="check_box check-apart"></span>Апартаменты
             </label>
           </fieldset>
         </div>
@@ -77,13 +77,16 @@
             <label class="visuallyhidden" for="min">минимальная цена</label>
             <label class="visuallyhidden" for="max">максимальная цена</label>
             <div class="range-input">
-              <input type="text" value="от 0" name="min" minlength="0" id="min" readonly>
-              <input type="text" value="до 4000" name="max" minlength="0" id="max" readonly>
+              <span>от</span>
+              <input type="number" name="min" min="0" max="4000" id='id66i1' disabled>
+              <span>до</span>
+              <input type="number" name="max" min="0" max="4000" id='id66i2' disabled>
             </div>
 
-            <div class="range-slider-track">
-              <div class="range-slider-pin-min"></div>
-              <div class="range-slider-pin-max"></div>
+            <div id='id66' class="range-slider-track">
+              <div id='id66b' class="range-between"></div>
+              <div id='id661' class="range-slider-pin-min"></div>
+              <div id='id662' class="range-slider-pin-max"></div>
             </div>
           </div>
 
@@ -100,13 +103,13 @@
           <h2>Найдено: <span>3</span></h2>
           <p>Сортировка:</p>
 
-          <button type="button" class="filter_radio">
+          <button type="button" class="filter_radio filt-price filter-active">
             По цене
           </button>
-          <button type="button" class="filter_radio">
+          <button type="button" class="filter_radio filt-type">
             По типу
           </button>
-          <button type="button" class="filter_radio">
+          <button type="button" class="filter_radio filt-rating">
             По рейтингу
           </button>
 
@@ -116,7 +119,7 @@
           <label for="pre" class="visuallyhidden">Предыдущий фильтр</label>
           <label for="next" class="visuallyhidden">Следующий фильтр</label>
 
-          <button type="button" class="pre" id="pre">&#9650;</button>
+          <button type="button" class="pre filter-active" id="pre">&#9650;</button>
           <button type="button" class="next" id="next">&#9660;</button>
         </div>
 
@@ -247,7 +250,7 @@
 
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/inner-page.js"></script>
 
 </body>
 

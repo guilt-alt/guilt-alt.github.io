@@ -7,10 +7,13 @@ var dateOut = form.querySelector("#dateOut");
 var increase_ad = document.querySelector(".decrease-adult");
 var increase_ch = document.querySelector(".decrease-children");
 
+
+var adult = form.querySelector("#adult");
 var decrease_ad = document.querySelector(".increase-adult");
 var decrease_ch = document.querySelector(".increase-children");
 
 var submit = form.querySelector(".main-form_submit");
+
 
 // Показ и скрытие формы
 
@@ -50,8 +53,10 @@ increase_ch.addEventListener("click", function (evt) {
   };
 });
 
+// валидация формы
+
 form.addEventListener("submit", function (evt) {
-  if (!dateIn.value || !dateOut.value) {
+  if (!dateIn.value || !dateOut.value || adult.value < 1) {
     evt.preventDefault();
     form.classList.remove("submit-error");
     form.offsetWidth = form.offsetWidth;
@@ -63,11 +68,9 @@ form.addEventListener("submit", function (evt) {
       form.offsetWidth = form.offsetWidth;
       form.classList.add("submit-valid");
 
-      setTimeout((evt) => {
+      setTimeout( function(evt) {
         form.submit();
       }, 800);
     }
   }
 });
-
-// inner
