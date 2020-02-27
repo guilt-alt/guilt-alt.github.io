@@ -160,6 +160,7 @@ a {
   margin: 0;
 
   display: flex;
+  flex-wrap: wrap;
 
   line-height: 21px;
 }
@@ -395,6 +396,10 @@ a {
   margin: 0;
 }
 
+.map p img {
+  width: 100%;
+}
+
 /* Footer */
 
 .footer {
@@ -577,7 +582,7 @@ a {
 /* Inner Form */
 
 .inner-form {
-  background-color: #ababab;
+  background-color: #666;
 }
 
 .form_filters {
@@ -718,14 +723,15 @@ input[type="checkbox"] {
   padding-right: 3px;
 
   width: 25%;
-  
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 .range-slider input {
-  -moz-appearance:textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
   appearance: textfield;
 
   color: inherit;
@@ -843,7 +849,7 @@ input[type="checkbox"] {
 }
 
 .radio-wrapper {
-  width: 516px;
+  min-width: 516px;
 
   font-size: 12px;
 
@@ -852,10 +858,37 @@ input[type="checkbox"] {
   align-items: flex-end;
 }
 
+.radio-wrapper div:first-child {
+  margin-right: 20px;
+  display: flex;
+  align-items: inherit;
+}
+
+.radio-wrapper div:last-child {
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .radio-wrapper h2,
 .radio-wrapper p {
   margin: 0;
   padding: 0;
+}
+
+.radio-wrapper p {
+  margin-left: 30px;
+}
+
+.filter_radio {
+  padding: 0;
+  margin-left: 25px;
+
+  text-transform: inherit;
+}
+
+.filter_radio:first-child {
+  margin-left: 0;
 }
 
 .filter_radio,
@@ -1075,4 +1108,16 @@ input[type="checkbox"] {
   height: 27px;
   border: 2px solid crimson;
   border-radius: 4px;
+}
+
+@media (min-width: 1060px) {
+  .intro-mask::before {
+    height: 51px;
+  }
+}
+
+@media (min-width: 400px) {
+  .intro-mask::before {
+    height: 47px;
+  }
 }

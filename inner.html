@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <title>Седона: Гостиницы</title>
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/minify.normalize.css">
+  <link rel="stylesheet" href="css/minify.style.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
   <main>
 
     <header class="inner-form">
-      <form class="form_filters" action="" method="post">
+      <form class="form_filters" action="#" method="post">
 
         <div class="checkbox-wrapper">
           <fieldset class="infrastructure">
@@ -78,15 +78,15 @@
             <label class="visuallyhidden" for="max">максимальная цена</label>
             <div class="range-input">
               <span>от</span>
-              <input type="number" name="min" min="0" max="4000" id='id66i1' disabled>
+              <input type="number" name="min" min="0" max="4000" id='min' disabled>
               <span>до</span>
-              <input type="number" name="max" min="0" max="4000" id='id66i2' disabled>
+              <input type="number" name="max" min="0" max="4000" id='max' disabled>
             </div>
 
-            <div id='id66' class="range-slider-track">
-              <div id='id66b' class="range-between"></div>
-              <div id='id661' class="range-slider-pin-min"></div>
-              <div id='id662' class="range-slider-pin-max"></div>
+            <div id='rangeTrack' class="range-slider-track">
+              <div id='rangeBetween' class="range-between"></div>
+              <div id='pinMin' class="range-slider-pin-min"></div>
+              <div id='pinMax' class="range-slider-pin-max"></div>
             </div>
           </div>
 
@@ -100,18 +100,22 @@
       <section class="filters">
 
         <div class="radio-wrapper">
-          <h2>Найдено: <span>3</span></h2>
-          <p>Сортировка:</p>
+          <div>
+            <h2>Найдено: <span>3</span></h2>
+            <p>Сортировка:</p>
+          </div>
 
-          <button type="button" class="filter_radio filt-price filter-active">
-            По цене
-          </button>
-          <button type="button" class="filter_radio filt-type">
-            По типу
-          </button>
-          <button type="button" class="filter_radio filt-rating">
-            По рейтингу
-          </button>
+          <div>
+            <button type="button" class="filter_radio filt-price filter-active">
+              По цене
+            </button>
+            <button type="button" class="filter_radio filt-type">
+              По типу
+            </button>
+            <button type="button" class="filter_radio filt-rating">
+              По рейтингу
+            </button>
+          </div>
 
         </div>
 
@@ -250,7 +254,7 @@
 
   </footer>
 
-  <script src="js/inner-page.js"></script>
+  <script src="js/minify.inner-page.js"></script>
 
 </body>
 
