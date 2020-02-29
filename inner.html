@@ -13,10 +13,10 @@
 
   <header class="header">
     <nav class="nav">
-      <ul class="main_nav main_nav-position">
+      <ul class="main_nav">
         <li><a class="link_active" href="#">Информация</a></li>
         <li><a class="link_active" href="#">Фото и Видео</a></li>
-        <li>
+        <li class="logo-wrapper">
           <a href="index.html" class="logo">
             <img src="img/logo.svg" width="140" height="72" alt="На главную, логотип Седоны">
           </a>
@@ -99,34 +99,30 @@
 
       <section class="filters">
 
-        <div class="radio-wrapper">
-          <div>
+        <div class="radio-title">
             <h2>Найдено: <span>3</span></h2>
             <p>Сортировка:</p>
-          </div>
+        </div>
 
-          <div>
-            <button type="button" class="filter_radio filt-price filter-active">
-              По цене
-            </button>
-            <button type="button" class="filter_radio filt-type">
-              По типу
-            </button>
-            <button type="button" class="filter_radio filt-rating">
-              По рейтингу
-            </button>
-          </div>
-
+        <div class="radio-wrapper">
+          <button type="button" class="filter_radio filt-price filter-active">
+            По цене
+          </button>
+          <button type="button" class="filter_radio filt-type">
+            По типу
+          </button>
+          <button type="button" class="filter_radio filt-rating">
+            По рейтингу
+          </button>
         </div>
 
         <div>
           <label for="pre" class="visuallyhidden">Предыдущий фильтр</label>
           <label for="next" class="visuallyhidden">Следующий фильтр</label>
 
-          <button type="button" class="pre filter-active" id="pre">&#9650;</button>
-          <button type="button" class="next" id="next">&#9660;</button>
+          <button type="button" class="pre" id="pre">&#9650;</button>
+          <button type="button" class="next filter-active" id="next">&#9660;</button>
         </div>
-
       </section>
     </header>
 

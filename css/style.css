@@ -19,7 +19,7 @@ body {
   padding: 0;
   width: 1200px;
 
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
 
@@ -84,7 +84,6 @@ a {
 .nav ul {
   margin: 0;
   padding: 0;
-  height: 56px;
 
   list-style: none;
   background-color: #fff;
@@ -92,19 +91,37 @@ a {
   display: flex;
 }
 
-.main_nav li {
-  height: 100%;
+.main_nav {
+  position: relative;
+  width: 100%;
 
-  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main_nav li {
+  width: 239px;
+  height: 56px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logo {
+.main_nav li:nth-child(3),
+.main_nav li:nth-child(8) {
+  width: 244px;
+}
+
+li.logo-wrapper {
   position: relative;
-  top: 9px;
+  display: inline-block;
+}
+
+.logo {
+  position: absolute;
+  top: -1px;
+  transform: translateX(52px);
 }
 
 .main_nav li a {
@@ -170,16 +187,10 @@ a {
   text-align: center;
   background-color: #81b3d2;
 
-  flex-grow: 1;
+  width: 400px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.features_blue-card div p {
-  width: 400px;
 }
 
 .features ul {
@@ -189,23 +200,39 @@ a {
   text-align: center;
   list-style: none;
 
-  flex-grow: 1;
+  width: 400px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .features-icons {
   min-height: 330px;
   width: 400px;
+  
+  display: flex;
+  align-items: center;
 }
 
-.features ul li h2 {}
+.features-icons li {
+  margin-top: 22px;
+  margin-bottom: 60px;
+}
 
-.features ul li p {
+.features-icons li:first-child {
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+
+.features ul li p,
+.features_blue-card div p {
   width: 400px;
+}
+
+.features-icons::before {
+  margin-top: 60px;
+  width: 72px;
+  height: 72px;
 }
 
 .icon_house::before {
@@ -220,8 +247,35 @@ a {
   content: url("/img/gift-icon.svg");
 }
 
-.features-cards {
+.features-cards,
+.features_blue-card {
   min-height: 256px;
+}
+
+.features-cards li h2,
+.features-icons li h2,
+.features-cards li p,
+.features-icons li p,
+.features_blue-card h2,
+.features_blue-card p {
+  margin: 0;
+  padding: 0;
+}
+
+.features-cards li,
+.features_blue-card p {
+  margin-top: 22px;
+}
+
+.features-cards li:last-child,
+.features_blue-card p:last-child {
+  margin-bottom: 48px;
+}
+
+
+.features-cards li:first-child,
+.features_blue-card h2 {
+  margin-top: 48px;
 }
 
 .features_bg-color {
@@ -404,6 +458,7 @@ a {
 
 .footer {
   width: 100%;
+  height: 120px;
 
   display: flex;
 
@@ -417,9 +472,17 @@ a {
 
 .footer-elem_wrapper {
   display: flex;
-  flex-grow: 1;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.footer-elem_wrapper {
+  min-width: 480px;
+}
+
+.footer-elem_wrapper:nth-child(2) {
+  min-width: 240px;
 }
 
 .call {
@@ -434,11 +497,19 @@ a {
   margin: 0;
   padding: 0;
 
-  width: 150px;
+  width: 100%;
   height: 48px;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.social-links li {
+  margin-left: 6px;
+}
+
+.social-links li:first-child {
+  margin-left: 0;
 }
 
 .footer-link {
@@ -464,6 +535,7 @@ a {
 
 .copy p {
   margin-right: 8px;
+  padding-left: 75px;
 }
 
 
@@ -560,11 +632,12 @@ a {
 
 .hotel-rating span:first-child {
   color: #81b3d2;
-  font-size: 24px;
+  font-size: 23px;
+  letter-spacing: -1px;
 }
 
 .hotel-rating span:last-child {
-  width: 110px;
+  min-width: 110px;
   height: 27px;
 
   color: #666;
@@ -677,26 +750,28 @@ input[type="checkbox"] {
 /* Range Slider */
 
 .price-range {
+  position: relative;
+
   padding: 0;
   margin: 0;
   border: none;
 }
 
 .price-range legend {
-  margin-bottom: 13px;
+  margin-bottom: 8px;
 }
 
 .range-slider {
-  width: 352px;
-  height: 67px;
+  width: 316px;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .range-input {
   position: relative;
+
+  margin-bottom: 19px;
 
   border: 2px solid #fff;
   border-radius: 2px;
@@ -738,7 +813,7 @@ input[type="checkbox"] {
 
   padding-left: 3px;
 
-  height: 36px;
+  height: 34px;
   width: 25%;
 
   border: none;
@@ -797,7 +872,7 @@ input[type="checkbox"] {
 }
 
 .button-wrapper button {
-  margin-top: 23px;
+  margin-top: 32px;
 
   color: inherit;
   text-transform: inherit;
@@ -831,7 +906,6 @@ input[type="checkbox"] {
 
 .filters div:last-child {
   flex-grow: 1;
-
   display: flex;
   justify-content: flex-end;
 }
@@ -848,36 +922,31 @@ input[type="checkbox"] {
   background-color: #f2f2f2;
 }
 
-.radio-wrapper {
-  min-width: 516px;
-
-  font-size: 12px;
-
+.radio-title {
+  min-width: 256px;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
 }
 
-.radio-wrapper div:first-child {
-  margin-right: 20px;
-  display: flex;
-  align-items: inherit;
-}
-
-.radio-wrapper div:last-child {
-  max-width: 600px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.radio-wrapper h2,
-.radio-wrapper p {
+.radio-title h2,
+.radio-title p {
   margin: 0;
   padding: 0;
 }
 
-.radio-wrapper p {
-  margin-left: 30px;
+.radio-title p {
+  margin-left: 36px;
+  font-size: 12px;
+}
+
+.radio-wrapper {
+  min-width: 756px;
+
+  font-size: 12px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .filter_radio {
@@ -885,10 +954,6 @@ input[type="checkbox"] {
   margin-left: 25px;
 
   text-transform: inherit;
-}
-
-.filter_radio:first-child {
-  margin-left: 0;
 }
 
 .filter_radio,
@@ -1110,13 +1175,13 @@ input[type="checkbox"] {
   border-radius: 4px;
 }
 
-@media (min-width: 1060px) {
+@media (max-width: 1060px) {
   .intro-mask::before {
     height: 51px;
   }
 }
 
-@media (min-width: 400px) {
+@media (max-width: 400px) {
   .intro-mask::before {
     height: 47px;
   }

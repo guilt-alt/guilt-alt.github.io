@@ -21,22 +21,19 @@ formFilters.addEventListener("submit", function (evt) {
     valid = true;
   } else {
     hotel.addEventListener("click", function (evt) {
-      if (checkHotel.classList.remove("check_box-valid")) {
-      } else {
+      if (checkHotel.classList.remove("check_box-valid")) {} else {
         checkMotel.classList.remove("check_box-valid");
         checkApart.classList.remove("check_box-valid");
       }
     });
     motel.addEventListener("click", function (evt) {
-      if (checkMotel.classList.remove("check_box-valid")) {
-      } else {
+      if (checkMotel.classList.remove("check_box-valid")) {} else {
         checkHotel.classList.remove("check_box-valid");
         checkApart.classList.remove("check_box-valid");
       }
     });
     apartments.addEventListener("click", function (evt) {
-      if (checkApart.classList.remove("check_box-valid")) {
-      } else {
+      if (checkApart.classList.remove("check_box-valid")) {} else {
         checkHotel.classList.remove("check_box-valid");
         checkMotel.classList.remove("check_box-valid");
       }
@@ -57,8 +54,8 @@ formFilters.addEventListener("submit", function (evt) {
 // фильтры "по цене" и тд.
 
 filt.addEventListener("click", function (evt) {
-  pre.classList.add("filter-active");
-  next.classList.remove("filter-active");
+  pre.classList.remove("filter-active");
+  next.classList.add("filter-active");
   if (filt.classList.add("filter-active")) {} else {
     if (filt1.classList.contains("filter-active") ||
       filt2.classList.contains("filter-active")) {
@@ -69,8 +66,8 @@ filt.addEventListener("click", function (evt) {
 });
 
 filt1.addEventListener("click", function (evt) {
-  pre.classList.remove("filter-active");
-  next.classList.remove("filter-active");
+  pre.classList.add("filter-active");
+  next.classList.add("filter-active");
   if (filt1.classList.add("filter-active")) {} else {
     if (filt.classList.contains("filter-active") ||
       filt2.classList.contains("filter-active")) {
@@ -81,8 +78,8 @@ filt1.addEventListener("click", function (evt) {
 });
 
 filt2.addEventListener("click", function (evt) {
-  next.classList.add("filter-active");
-  pre.classList.remove("filter-active");
+  pre.classList.add("filter-active");
+  next.classList.remove("filter-active");
   if (filt2.classList.add("filter-active")) {} else {
     if (filt.classList.contains("filter-active") ||
       filt1.classList.contains("filter-active")) {
@@ -96,14 +93,15 @@ filt2.addEventListener("click", function (evt) {
 
 pre.addEventListener("click", function (evt) {
   if (filt2.classList.contains("filter-active")) {
-    filt2.classList.remove("filter-active");
     filt1.classList.add("filter-active");
-    next.classList.remove("filter-active");
+    filt2.classList.remove("filter-active");
+    pre.classList.add("filter-active");
+    next.classList.add("filter-active");
   } else {
     if (filt1.classList.contains("filter-active")) {
-      filt1.classList.remove("filter-active");
       filt.classList.add("filter-active");
-      pre.classList.add("filter-active");
+      filt1.classList.remove("filter-active");
+      pre.classList.remove("filter-active");
     }
   }
 });
@@ -112,12 +110,13 @@ next.addEventListener("click", function (evt) {
   if (filt.classList.contains("filter-active")) {
     filt.classList.remove("filter-active");
     filt1.classList.add("filter-active");
-    pre.classList.remove("filter-active");
+    pre.classList.add("filter-active");
+    next.classList.add("filter-active");
   } else {
     if (filt1.classList.contains("filter-active")) {
-      filt1.classList.remove("filter-active");
       filt2.classList.add("filter-active");
-      next.classList.add("filter-active");
+      filt1.classList.remove("filter-active");
+      next.classList.remove("filter-active");
     }
   }
 });
