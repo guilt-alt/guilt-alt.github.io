@@ -12,7 +12,41 @@ var checkMotel = formFilters.querySelector(".check-motel");
 var apartments = formFilters.querySelector("#apartments");
 var checkApart = formFilters.querySelector(".check-apart");
 
-// валидация формы
+let formTools = document.querySelector(".tools");
+let toolWrap = document.querySelector(".comments__wrapper");
+let inputTools = formTools.querySelector("input");
+let impt = formTools.querySelector(".comment__button");
+
+// TODO: Заметки )
+
+impt.addEventListener("click", function(evt) {
+  evt.preventDefault();
+
+  impt.classList.toggle("in-bt-important");
+
+  if (impt.classList.contains("in-bt-important")) {
+    impt.textContent = "Важная заметка !"
+  } else {
+    impt.textContent = "Обычная заметка"
+  }
+});
+
+formTools.addEventListener("submit", function(evt) {
+  evt.preventDefault();
+  
+  let newTool = document.createElement("li");
+
+  if (impt.classList.contains("in-bt-important")) {
+    newTool.classList.add("in-important");
+    
+  }
+
+  newTool.textContent = inputTools.value;
+  toolWrap.append(newTool);
+  inputTools.value = "";
+});
+
+// ! валидация формы
 
 formFilters.addEventListener("submit", function (evt) {
   var valid = false;
@@ -51,7 +85,7 @@ formFilters.addEventListener("submit", function (evt) {
   }
 });
 
-// фильтры "по цене" и тд.
+// ! фильтры "по цене" и тд.
 
 filt.addEventListener("click", function (evt) {
   pre.classList.remove("filter-active");
@@ -89,7 +123,7 @@ filt2.addEventListener("click", function (evt) {
   }
 });
 
-// Интерактивные стрелки для переключения фильтров
+// * Интерактивные стрелки для переключения фильтров
 
 pre.addEventListener("click", function (evt) {
   if (filt2.classList.contains("filter-active")) {
@@ -121,7 +155,7 @@ next.addEventListener("click", function (evt) {
   }
 });
 
-// slider
+// ? slider
 
 setTimeout(init2slider('rangeTrack', 'rangeBetween', 'pinMin', 'pinMax', 'min', 'max'), 0);
 
@@ -311,4 +345,4 @@ function init2slider(idX, btwX, btn1X, btn2X, input1, input2) {
     };
   }
 
-}
+};

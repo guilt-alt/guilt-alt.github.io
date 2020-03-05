@@ -9,6 +9,7 @@ var increase_ch = document.querySelector(".decrease-children");
 
 
 var adult = form.querySelector("#adult");
+var children = form.querySelector("#children");
 var decrease_ad = document.querySelector(".increase-adult");
 var decrease_ch = document.querySelector(".increase-children");
 
@@ -30,26 +31,26 @@ link.addEventListener("click", function (evt) {
 // Количество человек в форме
 
 decrease_ad.addEventListener("click", function (evt) {
-  if (evt.target.parentElement.querySelector("input").value > 1) {
-    --evt.target.parentElement.querySelector("input").value
+  if (adult.value > 1) {
+    --adult.value
   };
 });
 
 decrease_ch.addEventListener("click", function (evt) {
-  if (evt.target.parentElement.querySelector("input").value > 0) {
-    --evt.target.parentElement.querySelector("input").value
+  if (children.value > 0) {
+    --children.value
   };
 });
 
 increase_ad.addEventListener("click", function (evt) {
-  if (evt.target.parentElement.querySelector("input").value < 10) {
-    ++evt.target.parentElement.querySelector("input").value
+  if (adult.value < 10) {
+    ++adult.value
   };
 });
 
 increase_ch.addEventListener("click", function (evt) {
-  if (evt.target.parentElement.querySelector("input").value < 10) {
-    ++evt.target.parentElement.querySelector("input").value
+  if (children.value < 10) {
+    ++children.value
   };
 });
 
@@ -68,7 +69,7 @@ form.addEventListener("submit", function (evt) {
       form.offsetWidth = form.offsetWidth;
       form.classList.add("submit-valid");
 
-      setTimeout( function(evt) {
+      setTimeout(function (evt) {
         form.submit();
       }, 800);
     }

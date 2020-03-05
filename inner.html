@@ -3,10 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Седона: Гостиницы</title>
 
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,500,600,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/minify.normalize.css">
   <link rel="stylesheet" href="css/minify.style.css">
+  <link rel="stylesheet" href="css/comments-style.css">
 </head>
 
 <body>
@@ -100,8 +104,8 @@
       <section class="filters">
 
         <div class="radio-title">
-            <h2>Найдено: <span>3</span></h2>
-            <p>Сортировка:</p>
+          <h2>Найдено: <span>3</span></h2>
+          <p>Сортировка:</p>
         </div>
 
         <div class="radio-wrapper">
@@ -213,6 +217,23 @@
 
   </main>
 
+  <article class="comments-block">
+    <p>Главное не забыть:</p>
+    <ol class="comments__wrapper">
+      <li class="tool">Проснуться 😎</li>
+    </ol>
+    <form class="tools" action="#" method="post">
+      <input type="text" name="" id="" class="comments__text" required>
+
+      <div class="comments__buttons-wrap">
+        <button type="button" class="comment__button">Обычная заметка</button>
+
+        <button type="submit" class="comment__submit">Записать</button>
+      </div>
+
+    </form>
+  </article>
+
   <footer class="footer footer-inner">
 
     <div class="footer-elem_wrapper">
@@ -250,7 +271,7 @@
 
   </footer>
 
-  <script src="js/minify.inner-page.js"></script>
+  <script src="js/inner-page.js"></script>
 
 </body>
 

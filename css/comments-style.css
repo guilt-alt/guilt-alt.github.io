@@ -1,0 +1,151 @@
+.comments-block {
+  padding: 40px 40px;
+
+  width: 100%;
+  background-color: #ffdf75;
+
+  font-family: "Montserrat Alternates", Arial, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.comments__block p {
+  padding: 0;
+  margin: 0 0 20px;
+
+  color: #000000;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.comments__wrapper {
+  color: tomato;
+  font-weight: 600;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+
+  counter-reset: todos;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.comments__wrapper li {
+  position: relative;
+
+  width: calc(100% - 60px);
+
+  margin-bottom: 10px;
+  padding: 20px 16px;
+  background-color: #ffffff;
+  color: #5c8bf0;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.comments__wrapper li:last-child {
+  margin-bottom: 0px;
+}
+
+.comments__wrapper li::before {
+  counter-increment: todos;
+  content: counter(todos);
+
+  position: absolute;
+  left: -40px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid #5c8bf0;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  z-index: 1;
+}
+
+.comments__wrapper li::after {
+  content: "";
+  
+  position: absolute;
+  left: -60px;
+
+  width: 60px;
+  height: 100%;
+  
+  background-color: #fff;
+}
+
+.comments__wrapper .in-important::before {
+  border-color: #fff;
+  background-color: tomato;
+}
+
+.comments__wrapper .in-important::after {
+  background-color: tomato;
+}
+
+.comments__text {
+  padding: 5px 10px;
+  width: 100%;
+  min-height: 40px;
+
+  border: 3px solid #acdeffee;
+  border-radius: 10px;
+}
+
+.comments__buttons-wrap {
+  margin: 20px 0px;
+}
+
+.comment__button {
+  margin-right: 20px;
+  min-width: 200px;
+  height: 40px;
+
+  color: #5c8bf0;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border: 2px solid #5c8bf0;
+}
+
+.comment__submit {
+  min-width: 200px;
+  height: 40px;
+
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  background-color: #5c8bf0;
+  border-radius: 10px;
+  border: none;
+}
+
+.comments__buttons-wrap button:focus {
+  outline: none;
+}
+
+.comments__wrapper .in-important {
+  background-color: tomato;
+  color: #fff;
+
+  border: none;
+}
+
+.in-bt-important {
+  background-color: tomato;
+  color: #fff;
+
+  border: none;
+}
