@@ -22,8 +22,9 @@ body {
 }
 
 .project {
+  margin-bottom: 30px;
   width: 48.5%;
-  height: 48.5%;
+  min-height: 48.5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,9 +58,14 @@ body {
   background: linear-gradient(155deg, rgba(70,193,174,1) 0%, rgba(255,198,100,1) 90%);
 }
 
+.project--happy {
+  background: linear-gradient(155deg, rgb(247, 237, 230) 0%, rgb(99, 99, 99) 90%);
+}
+
 @media (max-width: 1150px) {
   body {
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 
   .project {
