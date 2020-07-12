@@ -9,7 +9,7 @@ $phone = $_POST['phone'];
 $message = $_POST['message'];
 
 $mail->isSMTP();
-$mail->Host = 'smtp.yandex.ru';
+$mail->Host = 'ssl://smtp.yandex.ru';
 $mail->SMTPAuth = true;
 $mail->Username = 'S.A.S-69@yandex.ru';
 $mail->Password = 'MakeMusicNotWar';
