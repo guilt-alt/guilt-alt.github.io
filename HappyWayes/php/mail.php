@@ -11,13 +11,13 @@ $message = $_POST['message'];
 $mail->isSMTP();
 $mail->Host = 'ssl://smtp.yandex.ru';
 $mail->SMTPAuth = true;
-$mail->Username = 'S.A.S-69@yandex.ru';
-$mail->Password = 'MakeMusicNotWar';
+$mail->Username = '';
+$mail->Password = '';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
-$mail->setFrom('S.A.S-69@yandex.ru');
-$mail->addAddress('S.A.S-99@yandex.com');
+$mail->setFrom('');
+$mail->addAddress('');
 $mail->isHTML(true);
 
 $mail->Subject = 'Заявка с тестового сайта';
