@@ -41,15 +41,6 @@
           id="change"
           type="button">Change</button>
 
-  <script>
-    let vh = window.innerHeight * 0.01;
-
-    const setMobileHight = () => document.documentElement.style
-      .setProperty('--vh', `${vh}px`);
-
-    setMobileHight();
-    window.addEventListener('resize', setMobileHight);
-  </script>
   <script src="./sw.js"></script>
   <script src="./bundle.js"></script>
 </body>
