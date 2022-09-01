@@ -5,6 +5,8 @@
   font-display: swap;
   src: url(./../../fonts/RobotoRegular.woff2) format('woff2'),
     url(./../../fonts/RobotoRegular.woff) format('woff');
+  src: url(./../../fonts/RobotoRegular.woff2) format('woff2'),
+    url(./../../fonts/RobotoRegular.woff) format('woff');
 }
 
 @font-face {
@@ -12,6 +14,8 @@
   font-style: normal;
   font-weight: bold;
   font-display: swap;
+  src: url(./../../fonts/RobotoBold.woff2) format('woff2'),
+    url(./../../fonts/RobotoBold.woff) format('woff');
   src: url(./../../fonts/RobotoBold.woff2) format('woff2'),
     url(./../../fonts/RobotoBold.woff) format('woff');
 }
