@@ -1,0 +1,20 @@
+:root {
+  --outline-color: #6495ed;
+
+  --back-color: #ffffff;
+  --text-color: #333333;
+
+  --link-text-hover: #f0f8ff;
+  --link-back-hover: #6495ed;
+
+  --input-back-color: #87ceeb;
+  --input-back-hover: #f5deb3;
+
+  --button-text-color: #f0f8ff;
+  --button-text-hover: #ff6347;
+  --button-back-color: #fa8072;
+  --button-back-hover: #f5deb3;
+
+  --disabled-text-color: #777777;
+  --disabled-back-color: #f2f2f2;
+}

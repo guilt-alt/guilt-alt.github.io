@@ -20,15 +20,18 @@
   <link rel="apple-touch-icon"
         href="./icons/worter-masked-192.png">
   <link rel="stylesheet"
-        href="./style.css">
+        href="./css/style.css">
+  <link rel="stylesheet"
+        href="./css/light.css"
+        media="(prefers-color-scheme: light)">
+  <link rel="stylesheet"
+        href="./css/dark.css"
+        media="(prefers-color-scheme: dark)">
   <link rel="manifest"
         href="./manifest.json">
 </head>
 
 <body>
-  <button id="menu"
-          type="button">▼</button>
-
   <nav></nav>
 
   <p id="field">Choose Your Theme</p>
@@ -37,9 +40,14 @@
          id="input"
          type="text">
 
-  <button disabled
-          id="change"
-          type="button">Change</button>
+  <div>
+    <button disabled
+            id="change"
+            type="button">Change</button>
+    <button id="menu"
+            type="button"
+            tabindex="0">▼</button>
+  </div>
 
   <script src="./sw.js"></script>
   <script src="./bundle.js"></script>
