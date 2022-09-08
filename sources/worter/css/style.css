@@ -147,39 +147,44 @@ a:focus-visible {
   }
 }
 
-.input-wrapper {
-  position: relative;
+.input-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
 
   width: calc(100% - 40px);
   max-width: 400px;
+}
+
+.input-wrapper {
+  position: relative;
+
+  width: 100%;
   height: 60px;
 }
 
-label,
-input {
+input,
+label {
+  display: flex;
+  align-items: center;
+  text-align: center;
   position: absolute;
   top: 0;
   left: 0;
-
   padding: 5px;
   width: 100%;
   height: 100%;
 
   color: inherit;
-  font-size: 26px;
-  line-height: 21px;
+  font-size: 20px;
+  line-height: 24px;
   text-transform: none;
-}
-
-label {
-  padding: 20px 5px;
-  word-wrap: normal;
+  transition: .2s;
 }
 
 input {
-  color: transparent;
   background-color: var(--input-back-color);
-  transition: .2s;
 }
 
 input:hover {
@@ -208,13 +213,13 @@ input:disabled {
   display: flex;
   justify-content: space-between;
 
-  gap: 30px;
+  gap: 15px;
   width: calc(100% - 40px);
   max-width: 400px;
 }
 
 button {
-  width: 70%;
+  width: calc(100% - 75px);
   height: 60px;
 
   color: var(--button-text-color);
@@ -229,7 +234,7 @@ button {
 }
 
 button#menu {
-  width: 30%;
+  width: 60px;
 
   font-size: 30px;
 }
