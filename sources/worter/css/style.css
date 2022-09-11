@@ -1,37 +1,21 @@
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url(./../fonts/RobotoRegular.woff2) format('woff2'),
-    url(./../fonts/RobotoRegular.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: bold;
-  font-display: swap;
-  src: url(./../fonts/RobotoBold.woff2) format('woff2'),
-    url(./../fonts/RobotoBold.woff) format('woff');
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-
 html {
   height: calc(var(--vh, 1vh) * 100);
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   padding: 0;
-}
 
+  font-size: 18px;
+  line-height: 21px;
+  font-family: 'Ubuntu Mono', monospace;
+}
 p,
 a,
 ul,
@@ -50,15 +34,12 @@ button {
 
   border-radius: 5px;
 }
-
 p {
   font-size: 26px;
 }
-
 span {
   color: tomato;
 }
-
 body {
   position: relative;
 
@@ -68,15 +49,14 @@ body {
   justify-content: center;
 
   gap: 30px;
+  min-width: 400px;
   height: 100%;
 
   color: var(--text-color);
   background-color: var(--back-color);
 
-  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
 }
-
 nav {
   position: absolute;
   top: 0;
@@ -92,7 +72,6 @@ nav {
 
   z-index: 999;
 }
-
 ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -100,11 +79,9 @@ ul {
   width: 100%;
   height: 100%;
 }
-
 .nav--open {
   display: block;
 }
-
 a {
   display: flex;
   align-items: center;
@@ -118,16 +95,13 @@ a {
 
   transition: .2s;
 }
-
 a:hover {
   color: var(--link-text-hover);
   background-color: var(--link-back-hover);
 }
-
 a:focus-visible {
   outline: 3px solid var(--outline-color);
 }
-
 @media (min-width: 720px) {
   nav {
     height: -webkit-fit-content;
@@ -146,26 +120,23 @@ a:focus-visible {
     height: 60px;
   }
 }
-
 .input-container {
   display: flex;
   flex-direction: column;
 
   gap: 15px;
 
-  width: calc(100% - 40px);
+  width: 100%;
   max-width: 400px;
 }
-
 .input-wrapper {
   position: relative;
 
   width: 100%;
   height: 60px;
 }
-
-input,
-label {
+.input,
+.label {
   display: flex;
   align-items: center;
   text-align: center;
@@ -176,27 +147,32 @@ label {
   width: 100%;
   height: 100%;
 
+  border-radius: 0;
+
   color: inherit;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 21px;
   text-transform: none;
   transition: .2s;
 }
-
-input {
+.input::first-letter,
+.label::first-letter {
+  text-transform: lowercase;
+}
+.label {
+  color: tomato;
+  pointer-events: none;
+}
+.input {
   background-color: var(--input-back-color);
 }
-
-input:hover {
+.input:hover {
   background-color: var(--input-back-hover);
 }
-
-input:focus {
+.input:focus {
   background-color: transparent;
 }
-
-input:focus + label::after {
-  content: '';
+.input:focus ~ .input--bottom-border {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -204,11 +180,16 @@ input:focus + label::after {
   height: 6px;
   background-color: var(--input-back-color);
 }
-
-input:disabled {
+.input:disabled {
   background-color: var(--disabled-back-color);
 }
+@media (min-width: 401px) {
 
+  .input,
+  .label {
+    border-radius: 5px;
+  }
+}
 .button-wrapper {
   display: flex;
   justify-content: space-between;
@@ -217,7 +198,6 @@ input:disabled {
   width: calc(100% - 40px);
   max-width: 400px;
 }
-
 button {
   width: calc(100% - 75px);
   height: 60px;
@@ -226,28 +206,24 @@ button {
   background-color: var(--button-back-color);
 
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: inherit;
 
   transition: .2s;
   cursor: pointer;
 }
-
 button#menu {
   width: 60px;
 
   font-size: 30px;
 }
-
 button:hover {
   color: var(--button-text-hover);
   background-color: var(--button-back-hover);
 }
-
 button:focus-visible {
   outline: 3px solid var(--outline-color);
 }
-
 button:disabled {
   color: var(--disabled-text-color);
   background-color: var(--disabled-back-color);
