@@ -23,10 +23,10 @@
   <link rel="stylesheet"
         href="./css/style.css">
   <link rel="stylesheet"
-        href="./css/light.css"
+        href="./css/themes/light/blue.css"
         media="(prefers-color-scheme: light)">
   <link rel="stylesheet"
-        href="./css/dark.css"
+        href="./css/themes/dark/blue.css"
         media="(prefers-color-scheme: dark)">
 
   <link rel="manifest"
@@ -41,7 +41,6 @@
   <form class="input-container">
     <div class="input-wrapper">
       <input class="input"
-             type="text"
              disabled>
     </div>
   </form>
@@ -53,6 +52,89 @@
     <button id="menu"
             type="button"
             tabindex="0">▼</button>
+  </div>
+
+  <div class="themes">
+    <fieldset class="color light">
+      <legend>Схема</legend>
+      <input class="color__radio color__radio--violet"
+             type="radio"
+             name="color-light"
+             value="violet"
+             aria-label="Фиолетовая">
+      <input class="color__radio color__radio--red"
+             type="radio"
+             name="color-light"
+             value="red"
+             aria-label="Красная">
+      <input class="color__radio color__radio--yellow"
+             type="radio"
+             name="color-light"
+             value="yellow"
+             aria-label="Желтая">
+      <input class="color__radio color__radio--green"
+             type="radio"
+             name="color-light"
+             value="green"
+             aria-label="Зелёная">
+      <input class="color__radio color__radio--blue"
+             type="radio"
+             name="color-light"
+             value="blue"
+             aria-label="Синяя"
+             checked>
+    </fieldset>
+
+    <fieldset class="switcher">
+      <legend>Схема</legend>
+      <input class="switcher__radio switcher__radio--light"
+             type="radio"
+             name="color-scheme"
+             value="light"
+             aria-label="Светлая">
+      <input class="switcher__radio switcher__radio--auto"
+             type="radio"
+             name="color-scheme"
+             value="auto"
+             aria-label="Системная"
+             checked>
+      <input class="switcher__radio switcher__radio--dark"
+             type="radio"
+             name="color-scheme"
+             value="dark"
+             aria-label="Тёмная">
+      <div class="switcher__status"></div>
+    </fieldset>
+
+    <fieldset class="color dark">
+      <legend>Схема</legend>
+      <input class="color__radio color__radio--blue"
+             type="radio"
+             name="color-dark"
+             value="blue"
+             aria-label="Синяя"
+             checked>
+      <input class="color__radio color__radio--green"
+             type="radio"
+             name="color-dark"
+             value="green"
+             aria-label="Зелёная">
+      <input class="color__radio color__radio--yellow"
+             type="radio"
+             name="color-dark"
+             value="yellow"
+             aria-label="Желтая">
+      <input class="color__radio color__radio--red"
+             type="radio"
+             name="color-dark"
+             value="red"
+             aria-label="Красная">
+      <input class="color__radio color__radio--violet"
+             type="radio"
+             name="color-dark"
+             value="violet"
+             aria-label="Фиолетовая">
+    </fieldset>
   </div>
 
   <script src="./sw.js"></script>
