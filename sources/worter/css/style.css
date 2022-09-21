@@ -365,13 +365,13 @@ button:disabled {
   outline: none;
 }
 .switcher__radio--light {
-  background-image: url(./../../icons/sun.svg);
+  background-image: url(./../icons/sun.svg);
 }
 .switcher__radio--auto {
-  background-image: url(./../../icons/auto.svg);
+  background-image: url(./../icons/auto.svg);
 }
 .switcher__radio--dark {
-  background-image: url(./../../icons/moon.svg);
+  background-image: url(./../icons/moon.svg);
 }
 .switcher__status {
   position: absolute;
@@ -384,7 +384,7 @@ button:disabled {
   border-radius: 18px;
   background-color: rgb(255 255 255 / .5);
   background-repeat: no-repeat;
-  background-image: url(./../../icons/status.svg);
+  background-image: url(./../icons/status.svg);
   background-size: 32px;
   background-position: center;
   transition: background-position .1s ease-in;
