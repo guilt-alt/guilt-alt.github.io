@@ -1,0 +1,37 @@
+:root {
+  --outline-color: #f4ecf2;
+
+  --back-color: #a8b9bf;
+  --text-color: #62856e;
+  --text-wrong-color: #f4ecf2;
+
+  --link-text-hover: #62856e;
+  --link-back-hover: #f4ecf2;
+
+  --input-back-color: #c5e8e5;
+  --input-back-hover: #f4ecf2;
+
+  --button-text-color: #62856e;
+  --button-text-hover: #333333;
+  --button-back-color: #c5e8e5;
+  --button-back-hover: #f4ecf2;
+
+  --disabled-text-color: #777777;
+  --disabled-back-color: #b5c2be;
+}
+
+.switcher__radio {
+  filter: invert(0);
+}
+
+.switcher__radio:checked {
+  filter: invert(1);
+}
+
+.switcher__status {
+  filter: invert(0);
+}
+
+.switcher__radio:focus-visible ~ .switcher__status {
+  box-shadow: 0 0 0 2px cornflowerblue;
+}
