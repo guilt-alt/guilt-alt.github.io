@@ -144,6 +144,16 @@ span {
     display: none;
   }
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
 body {
   position: relative;
 
@@ -252,21 +262,19 @@ a:focus-visible {
 }
 .input,
 .label {
-  display: flex;
-  align-items: center;
-
   position: absolute;
   top: 0;
   left: 0;
-  padding: 18px 5px;
+  padding: 20px 5px;
   width: 100%;
   height: 100%;
 
   border-radius: 0;
 
-  text-align: center;
   color: inherit;
+
   font-size: 18px;
+  text-align: center;
   line-height: inherit;
   text-transform: none;
 
@@ -434,25 +442,28 @@ button:disabled {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+
   margin: 0;
   width: 32px;
   height: 32px;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: 24px;
+
   transition: filter .1s ease-in;
 }
 .switcher__radio:focus {
   outline: none;
 }
 .switcher__radio--light {
-  background-image: url(./../../icons/sun.svg);
+  background-image: url(./../icons/sun.svg);
 }
 .switcher__radio--auto {
-  background-image: url(./../../icons/auto.svg);
+  background-image: url(./../icons/auto.svg);
 }
 .switcher__radio--dark {
-  background-image: url(./../../icons/moon.svg);
+  background-image: url(./../icons/moon.svg);
 }
 .switcher__status {
   position: absolute;
@@ -461,13 +472,16 @@ button:disabled {
   right: 0;
   bottom: 0;
   z-index: -1;
+
   box-shadow: 0 0 0 2px rgb(0 0 0 / .2);
   border-radius: 18px;
+
   background-color: rgb(255 255 255 / .5);
   background-repeat: no-repeat;
-  background-image: url(./../../icons/status.svg);
+  background-image: url(./../icons/status.svg);
   background-size: 32px;
   background-position: center;
+
   transition: background-position .1s ease-in;
 }
 .switcher__radio--light:checked ~ .switcher__status {
